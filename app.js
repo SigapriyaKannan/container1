@@ -40,7 +40,6 @@ app.post('/calculate', async (req, res) => {
     }
 
     const filePath = path.join(dataDir, file);
-
     if (!fs.existsSync(filePath)) {
         return res.status(404).json({ file, error: 'File not found.' });
     }
